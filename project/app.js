@@ -15,14 +15,3 @@ angular.module('starter', ['ionic'])
     }
   });
 })
-
-.config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
-
-    .state('landing', {
-    url: '/',
-    templateUrl: 'templates/landing.html',
-  })
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
-});
