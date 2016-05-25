@@ -6,8 +6,23 @@
   font-family: 'header';
   src: url("../res/montserrat/Montserrat-Regular.ttf"); }
 
-body {
-  margin: 10px; }
-
 h3 {
   font-family: 'header'; }
+
+input {
+  border-radius: 2px; }
+
+.landingbutton {
+  margin: 0px; }
+
+.transparent-bg {
+  color: red; }
+
+.login-error {
+  color: red;
+  margin: 5px;
+  font-family: 'bodyfont'; }
+
+.item-text-wrap {
+  color: red;
+  margin: 5px; }

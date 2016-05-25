@@ -1,21 +1,47 @@
-<h3>Signup</h3>
-<form ng-submit="vm.signup()">
-  <div ng-repeat="error in vm.signup.errors">
-    <p ng-bind="error"></p>
-  </div>
-  <input type="text" ng-model="vm.signup.username" placeholder="username">
-  <input type="text" ng-model="vm.signup.email" placeholder="email">
-  <input type="password" ng-model="vm.signup.password" placeholder="password">
-  <input type="submit" name="name" value="Submit">
-</form>
+<h3>Sign Up</h3>
 
+<form ng-submit="vm.signup()">
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input type="text" ng-model="vm.signup.username" placeholder="username">
+    </label>
+    <label class="item item-input">
+      <input type="text" ng-model="vm.signup.email" placeholder="email">
+    </label>
+    <label class="item item-input">
+      <input type="password" ng-model="vm.signup.password" placeholder="password">
+    </label>
+    <button type="submit" class="button button-full button-balanced">
+      Sign Up
+    </button>
+  </div>
+  <div class="card" ng-show="vm.signup.errors.length>0">
+    <div class="item-text-wrap">
+      <div ng-repeat="error in vm.signup.errors">
+        <p ng-bind="error" class="login-error"></p>
+      </div>
+    </div>
+  </div>
+</form>
 
 <h3>Log In</h3>
 <form ng-submit="vm.login()">
-  <div ng-repeat="error in vm.login.errors">
-    <p ng-bind="error"></p>
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input type="text" ng-model="vm.login.email" placeholder="email">
+    </label>
+    <label class="item item-input">
+      <input type="password" ng-model="vm.login.password" placeholder="password">
+    </label>
+    <button type="submit" class="button button-full button-balanced">
+      Log In
+    </button>
   </div>
-  <input type="text" ng-model="vm.login.email" placeholder="email">
-  <input type="password" ng-model="vm.login.password" placeholder="password">
-  <input type="submit" name="name" value="Submit">
+  <div class="card" ng-show="vm.login.errors.length>0">
+    <div class="item-text-wrap">
+      <div ng-repeat="error in vm.login.errors">
+        <p ng-bind="error" class="login-error"></p>
+      </div>
+    </div>
+  </div>
 </form>

@@ -14,6 +14,10 @@ var paths = {
 
 gulp.task('default', ['sass', 'js']);
 
+// gulp.task('default', ['watch'], function() {
+//   gulp.start('styles', 'scripts', 'images');
+// });
+
 gulp.task('js', function() {
   gulp.src(['./project/**/*.js'])
   .pipe(order([
