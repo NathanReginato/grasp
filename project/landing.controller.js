@@ -1,7 +1,9 @@
 function landingController($http, $state, $localStorage, landingPage){
     var vm = this;
+    vm.errors = []
     console.log("controller connected");
     vm.signup = function(){
+      vm.errors = []
       var obj = {
         name: vm.signup.username,
         password: vm.signup.password,
@@ -12,8 +14,10 @@ function landingController($http, $state, $localStorage, landingPage){
         $localStorage.$default({ token: res.data.token })
         $state.go('dashboard');
       }).catch(function(res){
-        console.log('this is the catch');
-        console.log(res.data.errors);
+      console.log('this is the catch');
+        res.data.errors.forEach(function(elem){
+          vm.errors.push(elem)
+        })
       })
     }
 

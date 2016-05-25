@@ -1,15 +1,18 @@
 <h1>Landing page</h1>
 <form ng-submit="vm.signup()">
-  <input type="text" ng-model="vm.signup.username">
-  <input type="text" ng-model="vm.signup.password">
-  <input type="text" ng-model="vm.signup.email">
+  <div ng-repeat="error in vm.errors">
+    <p ng-bind="error"></p>
+  </div>
+  <input type="text" ng-model="vm.signup.username" placeholder="username">
+  <input type="text" ng-model="vm.signup.email" placeholder="email">
+  <input type="password" ng-model="vm.signup.password" placeholder="password">
   <input type="submit" name="name" value="Submit">
 </form>
 
 
 <h1>Log In</h1>
 <form ng-submit="vm.login()">
-  <input type="text" ng-model="vm.login.password">
-  <input type="text" ng-model="vm.login.email">
+  <input type="text" ng-model="vm.login.email" placeholder="email">
+  <input type="password" ng-model="vm.login.password" placeholder="password">
   <input type="submit" name="name" value="Submit">
 </form>
