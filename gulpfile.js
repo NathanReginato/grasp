@@ -14,10 +14,6 @@ var paths = {
 
 gulp.task('default', ['sass', 'js']);
 
-var javascriptFiles = [
-  'js/someFile.js'
-]
-
 gulp.task('js', function() {
   gulp.src(['./project/**/*.js'])
   .pipe(order([

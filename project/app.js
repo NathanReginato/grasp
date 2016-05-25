@@ -21,7 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
     .state('landing', {
     url: '/',
-    templateUrl: 'templates/menu.html',
+    templateUrl: 'templates/landing.html',
     controller: 'AppCtrl'
   })
   // if none of the above states are matched, use this as the fallback
