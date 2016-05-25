@@ -10,8 +10,17 @@
 
 }
 
+h1 {
+  font-family: "header", sans-serif;
+}
+
+h2 {
+  font-family: "header", sans-serif;
+  color: #057965;
+}
+
 h3 {
-  font-family: 'header'
+  font-family: "header", sans-serif;
 }
 
 input{
@@ -30,9 +39,4 @@ input{
   color: red;
   margin: 5px;
   font-family: 'bodyfont';
-}
-
-.item-text-wrap{
-  color: red;
-  margin: 5px;
 }

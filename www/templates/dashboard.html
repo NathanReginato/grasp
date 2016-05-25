@@ -1,2 +1,7 @@
 <h1>DASHBOARD</h1>
-<h1>SWEET</h1>
+<div class="card" ng-repeat="class in vm.classesArray">
+  <div class="item item-text-wrap">
+    <p ng-bind="class.attributes.class_name"></p>
+    <p ng-bind="class.attributes.class_description"></p>
+  </div>
+</div>

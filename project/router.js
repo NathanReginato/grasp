@@ -14,10 +14,7 @@ angular.module('graspMobile')
     url: '/dashboard',
     controllerAs: 'vm',
     templateUrl: 'templates/dashboard.html',
-    controller: function($http){
-      var vm = this;
-      console.log("dashboard controller connected");
-    }
+    controller: dashboard,
   })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
