@@ -1,7 +1,15 @@
 <h1>Landing page</h1>
 <form ng-submit="vm.signup()">
-  <input type="text" ng-model="vm.username">
-  <input type="text" ng-model="vm.password">
-  <input type="text" ng-model="vm.email">
+  <input type="text" ng-model="vm.signup.username">
+  <input type="text" ng-model="vm.signup.password">
+  <input type="text" ng-model="vm.signup.email">
+  <input type="submit" name="name" value="Submit">
+</form>
+
+
+<h1>Log In</h1>
+<form ng-submit="vm.login()">
+  <input type="text" ng-model="vm.login.password">
+  <input type="text" ng-model="vm.login.email">
   <input type="submit" name="name" value="Submit">
 </form>

@@ -1,4 +1,4 @@
-angular.module('starter')
+angular.module('graspMobile')
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider

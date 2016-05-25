@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'ngStorage'])
+angular.module('graspMobile', ['ionic', 'ngStorage'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

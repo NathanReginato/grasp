@@ -18,6 +18,8 @@ gulp.task('js', function() {
   gulp.src(['./project/**/*.js'])
   .pipe(order([
     'project/app.js',
+    'project/landingpage.factory.js',
+    'project/landing.controller.js'
     ], { base: './' }))
         .pipe(concat('scripts.min.js'))
   .pipe(gulp.dest('./www/js')).on('error', gutil.log)
