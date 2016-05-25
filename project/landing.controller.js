@@ -11,7 +11,6 @@ function landingController($http, $state, $localStorage, landingPage){
     }
 
     vm.login = function(){
-      landingPage.activate();
       var obj = {
         password: vm.login.password,
         email: vm.login.email
