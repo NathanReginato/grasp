@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,7 +22,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     .state('landing', {
     url: '/',
     templateUrl: 'templates/landing.html',
-    controller: 'AppCtrl'
   })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
