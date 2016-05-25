@@ -1,6 +1,6 @@
 <h1>Landing page</h1>
 <form ng-submit="vm.signup()">
-  <div ng-repeat="error in vm.errors">
+  <div ng-repeat="error in vm.signup.errors">
     <p ng-bind="error"></p>
   </div>
   <input type="text" ng-model="vm.signup.username" placeholder="username">
@@ -12,6 +12,9 @@
 
 <h1>Log In</h1>
 <form ng-submit="vm.login()">
+  <div ng-repeat="error in vm.login.errors">
+    <p ng-bind="error"></p>
+  </div>
   <input type="text" ng-model="vm.login.email" placeholder="email">
   <input type="password" ng-model="vm.login.password" placeholder="password">
   <input type="submit" name="name" value="Submit">
