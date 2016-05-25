@@ -7,7 +7,14 @@ function landingController($http, $state, $localStorage, landingPage){
         password: vm.signup.password,
         email: vm.signup.email
       }
-      landingPage.signUp(obj);
+      landingPage.signUp(obj)
+      .then(function(res){
+        $localStorage.$default({ token: res.data.token })
+        $state.go('dashboard');
+      }).catch(function(res){
+        console.log('this is the catch');
+        console.log(res.data.errors);
+      })
     }
 
     vm.login = function(){
@@ -15,6 +22,6 @@ function landingController($http, $state, $localStorage, landingPage){
         password: vm.login.password,
         email: vm.login.email
       }
-      landingPage.logIn(obj);
+      landingPage.logIn(obj)
     }
   }
