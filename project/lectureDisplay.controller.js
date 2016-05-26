@@ -2,9 +2,7 @@ function lectureDisplay($http, $state, $localStorage, dashboard, landingPage){
   var vm = this;
     // body...
 
-  vm.lecturesArray = dashboard.getLecturesArray().then(function () {
-    
-  })
+  vm.lecturesArray = dashboard.getLecturesArray()
   console.log('lectures in controller', vm.lecturesArray)
 
   // vm.joinlecture = function(id){

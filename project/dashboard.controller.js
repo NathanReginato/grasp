@@ -6,8 +6,9 @@ function dashboard($http, $state, $localStorage, dashboard, landingPage){
   })
 
   vm.viewlectures = function(links){
-    dashboard.getLectures(links)
-    $state.go('lectures');
+    dashboard.getLectures(links).then(function () {
+      $state.go('lectures');
+    })
   }
 
   vm.refresh = function(){

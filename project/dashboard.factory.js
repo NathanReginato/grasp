@@ -19,6 +19,7 @@ angular.module('graspMobile')
   }
 
   function getLecturesArray() {
+    console.log('in factory', lecturesArray);
     return lecturesArray
   }
 
