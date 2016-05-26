@@ -3,7 +3,7 @@ angular.module('graspMobile')
   return {
     request: function(config) {
       if ($localStorage.token) {
-        config.headers.Authorization = $localStorage.token;
+        config.headers.Authentication = $localStorage.token;
       }
       return config;
     },

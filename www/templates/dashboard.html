@@ -1,7 +1,8 @@
 <h1>DASHBOARD</h1>
 <div class="card" ng-repeat="class in vm.classesArray">
-  <div class="item item-text-wrap">
+  <div class="item item-text-wrap" ng-click="vm.joinlecture({{class.attributes.id}})">
     <p ng-bind="class.attributes.class_name"></p>
     <p ng-bind="class.attributes.class_description"></p>
+    Touch To Join Lecture
   </div>
 </div>

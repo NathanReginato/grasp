@@ -19,6 +19,13 @@ angular.module('graspMobile')
     templateUrl: 'templates/dashboard.html',
     controller: dashboard,
   })
+  .state('lectureView', {
+    scope: {},
+    url: '/lectureview',
+    controllerAs: 'vm',
+    templateUrl: 'templates/lectureView.html',
+    controller: lectureViewController,
+  })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
 });

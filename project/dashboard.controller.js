@@ -5,4 +5,9 @@ function dashboard($http, $state, $localStorage, dashboard){
     vm.classesArray = res.data
   })
 
+  vm.joinlecture = function(id){
+    console.log(id);
+    $state.go('lectureView');
+  }
+
 }
