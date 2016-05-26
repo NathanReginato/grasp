@@ -11,6 +11,12 @@ function dashboard($http, $state, $localStorage, dashboard, landingPage){
     $state.go('lectureView', {lecture_id:lecId});
   }
 
+  vm.refresh = function(){
+    dashboard.getClasses().then(function (res) {
+      vm.classesArray = res.data
+    })
+  }
+
   vm.logOut = function() {
     landingPage.logOut()
   }
