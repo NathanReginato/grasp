@@ -1,7 +1,9 @@
 <h1>Lecture View!</h1>
-<button class="button button-light" ng-click="vm.vote(1)">
-  GOT IT
-</button>
-<button class="button button-light" ng-click="vm.vote(3)">
-  I DONT GET IT
-</button>
+
+<div class="item range">
+  <i class="icon ion-help"></i>
+  <input ng-model='vm.slider' ng-change="vm.vote()" type="range" name="volume" min="1" max="3" value="2">
+  <i class="icon ion-ios-lightbulb-outline"></i>
+</div>
+
+<h1>{{vm.slider}}</h1>
