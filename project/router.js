@@ -1,8 +1,7 @@
 angular.module('graspMobile')
 
-.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
+.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   $httpProvider.interceptors.push("authInterceptor");
-  $locationProvider.html5Mode(true);
 
   $stateProvider
   .state('landing', {
