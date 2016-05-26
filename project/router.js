@@ -27,7 +27,7 @@ angular.module('graspMobile')
     controller: lectureViewController,
     resolve: {
       user: function(lectureView) {
-        lectureView.getMe()
+        return lectureView.getMe()
       }
     }
   })

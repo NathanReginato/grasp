@@ -15,7 +15,7 @@ angular.module('graspMobile')
     return $http.get('http://localhost:3000/api/v1/auth/me')
     .then(function(res){
       console.log('getme', res.data.id);
-      user_id= res.data.id 
+      user_id = res.data.id 
     });
   }
 
