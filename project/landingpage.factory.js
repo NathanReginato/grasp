@@ -1,22 +1,9 @@
 angular.module('graspMobile')
 .factory('landingPage', function($state, $http, $localStorage){
 
-  var userId;
-
   return {
     signUp: signUp,
-    logIn: logIn,
-    idGetter: idGetter,
-    idSetter: idSetter
-  }
-
-  function idGetter(){
-    return userId
-  }
-
-  function idSetter(id){
-    console.log('set id');
-    userId = id
+    logIn: logIn
   }
 
   function signUp(obj){

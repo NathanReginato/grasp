@@ -25,7 +25,13 @@ angular.module('graspMobile')
     controllerAs: 'vm',
     templateUrl: 'templates/lectureView.html',
     controller: lectureViewController,
+    resolve: {
+      user: function(lectureView) {
+        lectureView.getMe()
+      }
+    }
   })
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
 });
