@@ -15,7 +15,7 @@ angular.module('graspMobile')
     return $http.get('https://panic-button-g20.herokuapp.com/api/v1/auth/me')
     .then(function(res){
       console.log('getme', res.data.id);
-      user_id = res.data.id 
+      user_id = res.data.id
     });
   }
 

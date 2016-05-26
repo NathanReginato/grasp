@@ -1,14 +1,13 @@
 <h1>----</h1>
 <div class="bar bar-header bar-light">
-  <h2>My Classes</h2>
+  <h2>My Lectures</h2>
   <button class="button button-small button-stable" ng-click="vm.logOut()">
     <span href="" class="ion-ios-close-outline"></span> logout
   </button>
 </div>
-<div class="card" ng-repeat="class in vm.classesArray">
-  <div class="item item-text-wrap" ng-click="vm.viewlectures({{class.links}})">
-    <p ng-bind="class.attributes.class_name"></p>
-    <p ng-bind="class.attributes.class_description"></p>
+<div class="card" ng-repeat="lecture in vm.lecturesArray">
+  <div class="item item-text-wrap">
+    <p ng-bind="lecture"></p>
     Touch To Join Lecture
   </div>
 </div>

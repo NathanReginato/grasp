@@ -5,10 +5,9 @@ function dashboard($http, $state, $localStorage, dashboard, landingPage){
     vm.classesArray = res.data
   })
 
-  vm.joinlecture = function(id){
-    var lecId = id
-    console.log(id);
-    $state.go('lectureView', {lecture_id:lecId});
+  vm.viewlectures = function(links){
+    dashboard.getLectures(links)
+    $state.go('lectures');
   }
 
   vm.refresh = function(){

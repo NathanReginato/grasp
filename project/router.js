@@ -18,6 +18,13 @@ angular.module('graspMobile')
     templateUrl: 'templates/dashboard.html',
     controller: dashboard,
   })
+  .state('lectures', {
+    scope: {},
+    url: '/lectures',
+    controllerAs: 'vm',
+    templateUrl: 'templates/lectures.html',
+    controller: lectureDisplay
+  })
   .state('lectureView', {
     scope: {},
     url: '/lectureview/:id',
