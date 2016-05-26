@@ -6,8 +6,8 @@ function dashboard($http, $state, $localStorage, dashboard){
   })
 
   vm.joinlecture = function(id){
+    var lecId = id
     console.log(id);
-    $state.go('lectureView');
+    $state.go('lectureView', {lecture_id:lecId});
   }
-
 }

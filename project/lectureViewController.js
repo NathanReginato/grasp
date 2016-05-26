@@ -1,22 +1,15 @@
-function lectureViewController ($http, $state, $localStorage){
+function lectureViewController ($stateParams, landingPage){
+    var socket = io.connect('http://Nick-MacBook-Air.local:3000');
+    socket.emit('set', {lectureId: $stateParams.lecture_id, user_id:1})
+    var lectureId = 1; //$state.params.id
+    var status = 0;
     var vm = this;
-
-
-
-    console.log("lecture view controller connected");
-    // vm.signup = function(){
-    //   if (vm.signup.errors.length === 0) {
-    //     landingPage.signUp(obj)
-    //     .then(function(res){
-    //       console.log(res);
-    //       $localStorage.$default({ token: res.data.token })
-    //       $state.go('dashboard');
-    //     }).catch(function(res){
-    //       console.log('this is the catch');
-    //       res.data.errors.forEach(function(elem){
-    //       vm.signup.errors.push(elem)
-    //       })
-    //     })
-    //   }
-    // }
+    socket.on(lectureId, function (data) {
+      console.log(data);
+    })
+    vm.vote = function(vote) {
+      socket.emit('chart', {lectureId: $stateParams.lecture_id, user_id: landingPage.idGetter(), status_id: vote, lastStatus: status})
+      console.log({lectureId: $stateParams.lecture_id, user_id: landingPage.idGetter(), status_id: vote, lastStatus: status});
+      status = vote;
+    }
   }

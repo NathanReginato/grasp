@@ -20,7 +20,8 @@ angular.module('graspMobile')
   })
   .state('lectureView', {
     scope: {},
-    url: '/lectureview',
+    url: '/lectureview/:id',
+    params: {lecture_id: null},
     controllerAs: 'vm',
     templateUrl: 'templates/lectureView.html',
     controller: lectureViewController,

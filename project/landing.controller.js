@@ -37,6 +37,7 @@ function landingController($http, $state, $localStorage, landingPage){
       if (vm.login.errors.length === 0) {
         landingPage.logIn(obj).then(function (res) {
           // console.log(res);
+          landingPage.idSetter(res.data.user_id)
           $localStorage.$default({ token: res.data.token })
           $state.go('dashboard');
         }).catch(function(res){
