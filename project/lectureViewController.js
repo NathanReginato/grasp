@@ -1,4 +1,4 @@
-function lectureViewController ($stateParams, lectureView){
+function lectureViewController ($stateParams, lectureView, landingPage){
     var vm = this;
     var socket = io.connect('http://Nick-MacBook-Air.local:3000');
     var lecture_id = 1;
@@ -14,5 +14,9 @@ function lectureViewController ($stateParams, lectureView){
       socket.emit('chart', {lecture_id: $stateParams.lecture_id, user_id: user_id, status_id: vote, lastStatus: status})
       console.log({lecture_id: $stateParams.lecture_id, user_id: user_id, status_id: vote, lastStatus: status});
       status = vote;
+    }
+
+    vm.logOut = function() {
+      landingPage.logOut()
     }
   }

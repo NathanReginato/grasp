@@ -3,7 +3,8 @@ angular.module('graspMobile')
 
   return {
     signUp: signUp,
-    logIn: logIn
+    logIn: logIn,
+    logOut: logOut
   }
 
   function signUp(obj){
@@ -22,6 +23,11 @@ angular.module('graspMobile')
     .then(function(res){
       return res
     });
+  }
+
+  function logOut() {
+    $localStorage.$reset()
+    $state.go('landing')
   }
 
   // 'https://panic-button-g20.herokuapp.com/api/v1/auth/login'

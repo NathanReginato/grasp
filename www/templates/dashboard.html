@@ -1,4 +1,10 @@
-<h1>DASHBOARD</h1>
+<h1>----</h1>
+<div class="bar bar-header bar-light">
+  <h2>My Classes</h2>
+  <button class="button button-small button-stable" ng-click="vm.logOut()">
+    <span href="" class="ion-ios-close-outline"></span> logout
+  </button>
+</div>
 <div class="card" ng-repeat="class in vm.classesArray">
   <div class="item item-text-wrap" ng-click="vm.joinlecture({{class.attributes.id}})">
     <p ng-bind="class.attributes.class_name"></p>

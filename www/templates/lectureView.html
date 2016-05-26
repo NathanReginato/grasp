@@ -1,5 +1,10 @@
-<h1>Lecture View!</h1>
-
+<h1>----</h1>
+<div class="bar bar-header bar-light">
+  <a ui-sref="dashboard" class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
+  <button class="button button-small button-stable" ng-click="vm.logOut()">
+    <span href="" class="ion-ios-close-outline"></span> logout
+  </button>
+</div>
 <div class="item range">
   <i class="icon ion-help"></i>
   <input ng-model='vm.slider' ng-change="vm.vote()" type="range" name="volume" min="1" max="3" value="2">

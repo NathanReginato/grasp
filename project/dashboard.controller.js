@@ -1,4 +1,4 @@
-function dashboard($http, $state, $localStorage, dashboard){
+function dashboard($http, $state, $localStorage, dashboard, landingPage){
   var vm = this;
     // body...
   dashboard.getClasses().then(function (res) {
@@ -9,5 +9,9 @@ function dashboard($http, $state, $localStorage, dashboard){
     var lecId = id
     console.log(id);
     $state.go('lectureView', {lecture_id:lecId});
+  }
+
+  vm.logOut = function() {
+    landingPage.logOut()
   }
 }
