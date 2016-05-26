@@ -1,7 +1,7 @@
 function lectureViewController ($stateParams, lectureView, landingPage){
     var vm = this;
     var socket = io.connect('http://Nick-MacBook-Air.local:3000');
-    var lecture_id = 1;
+    var lecture_id;
     var status;
     var user_id = lectureView.getId();
 

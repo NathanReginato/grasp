@@ -5,11 +5,10 @@ function lectureDisplay($http, $state, $localStorage, dashboard, landingPage){
   vm.lecturesArray = dashboard.getLecturesArray()
   console.log('lectures in controller', vm.lecturesArray)
 
-  // vm.joinlecture = function(id){
-  //   var lecId = id
-  //   console.log(id);
-  //   $state.go('lectureView', {lecture_id:lecId});
-  // }
+  vm.goToLecture = function(lecture_id) {
+    console.log(lecture_id);
+    $state.go('lectureView', {lecture_id:lecture_id})
+  }
   //
   // vm.refresh = function(){
   //   dashboard.getClasses().then(function (res) {

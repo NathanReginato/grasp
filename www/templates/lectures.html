@@ -6,10 +6,11 @@
   </button>
 </div>
 <div class="card" ng-repeat="lecture in vm.lecturesArray">
-  <div class="item item-text-wrap">
+  <div class="item item-text-wrap" ng-click="vm.goToLecture(lecture.attributes.lecture_id)">
     <p ng-bind="lecture.attributes.name"></p>
     <p ng-bind="lecture.attributes.description"></p>
     Touch To Join Lecture
   </div>
+
 </div>
 <button ng-click="vm.refresh()" class="button icon ion-loop"></button>
