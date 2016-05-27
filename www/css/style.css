@@ -11,11 +11,14 @@ h1 {
 
 h2 {
   font-family: "header", sans-serif;
-  color: #057965; }
+  color: #057965;
+  text-shadow: 0px 2px 5px black; }
 
 h3 {
   font-family: "header", sans-serif;
-  margin: 20px 0 0 20px; }
+  margin: 20px 0 0 20px;
+  color: #057965;
+  text-shadow: 0px 2px 5px black; }
 
 input {
   border-radius: 2px; }
@@ -34,8 +37,9 @@ input {
 .image {
   width: 375px;
   height: 375px;
-  background: url("../img/grasp_logo.png") center no-repeat;
-  background-size: contain; }
+  background: url("../img/grasplogo.png") center no-repeat;
+  background-size: contain;
+  margin-bottom: 10px; }
 
 .container {
   margin: 75px 0 0 0;
@@ -53,13 +57,36 @@ input {
 
 .grip {
   text-align: center;
-  margin: -100px 0 0 0; }
+  margin: -75px 0 0 0;
+  text-shadow: 0px 2px 5px black; }
 
 body {
-  padding-top: 20px; }
+  padding-top: 20px;
+  background: url("../img/background_black.jpg") center; }
 
 .nav-bar {
   margin: 20px 0 0 0; }
 
-.push-right {
-  float: right; }
+.logout {
+  margin-left: auto; }
+
+#lecture {
+  margin-left: 12%;
+  margin-right: auto;
+  line-height: 0px; }
+
+#lecture-header {
+  background-color: #4d4d4d;
+  border-top: 1px solid ghostwhite;
+  border-bottom: 1px solid ghostwhite; }
+
+#slider-header {
+  background-color: #4d4d4d;
+  border-top: 1px solid ghostwhite;
+  border-bottom: 1px solid ghostwhite; }
+
+#classes {
+  text-align: center;
+  background-color: #4d4d4d;
+  border-top: 1px solid ghostwhite;
+  border-bottom: 1px solid ghostwhite; }
