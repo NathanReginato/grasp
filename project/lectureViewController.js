@@ -5,18 +5,21 @@ function lectureViewController ($stateParams, lectureView, landingPage){
     var status;
     var user_id = lectureView.getId();
 
+
     // if (socket) {
-    //
-    //   socket.emit('set', {lecture_id: $stateParams.lecture_id, user_id:user_id, status_id: status})
-    //   socket.on(lecture_id, function (data) {
-    //     console.log(data);
-    //   })
-    //   vm.vote = function() {
-    //     var vote = parseInt(vm.slider)
-    //     socket.emit('chart', {lecture_id: $stateParams.lecture_id, user_id: user_id, status_id: vote, lastStatus: status})
-    //     console.log({lecture_id: $stateParams.lecture_id, user_id: user_id, status_id: vote, lastStatus: status});
-    //     status = vote;
-    //   }
+
+      // socket.emit('set', {lecture_id: $stateParams.lecture_id, user_id:user_id, status_id: status})
+      // socket.on(lecture_id, function (data) {
+      //   console.log(data);
+      // })
+      vm.max = 3
+      vm.vote = function() {
+        var vote = parseInt(vm.slider)
+        // socket.emit('chart', {lecture_id: $stateParams.lecture_id, user_id: user_id, status_id: vote, lastStatus: status})
+        console.log({lecture_id: $stateParams.lecture_id, user_id: user_id, status_id: vote, lastStatus: status});
+        status = vote;
+        vm.max = 2
+      }
     // } else {
     //   console.log('socket not available');
     // }
