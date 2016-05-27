@@ -3,7 +3,7 @@
   <h2>My Lectures</h2>
   <a ui-sref="dashboard" class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
   <button class="button button-small button-stable" ng-click="vm.logOut()">
-    Logout <span href="" class="ion-ios-close-outline"></span> 
+    Logout <span href="" class="ion-ios-close-outline"></span>
   </button>
 </div>
 <div class="card" ng-repeat="lecture in vm.lecturesArray">
@@ -11,6 +11,10 @@
     <p ng-bind="lecture.attributes.name"></p>
     <p ng-bind="lecture.attributes.description"></p>
     Touch To Join Lecture
+    <div class="dot-container" ng-show="lecture.attributes.is_active">
+      <div class="the-dot ion-record"></div>
+    </div>
+
   </div>
 
 </div>

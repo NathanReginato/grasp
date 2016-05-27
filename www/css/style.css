@@ -44,3 +44,8 @@ input {
 .refresh-button {
   position: fixed;
   bottom: 0; }
+
+.the-dot {
+  position: inherit;
+  float: right;
+  color: #057965; }
