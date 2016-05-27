@@ -61,7 +61,7 @@ input{
 }
 
 .the-dot {
-  position: inherit;
+  font-size: 0.8em;
   float: right;
   color: #057965;
 }
@@ -79,6 +79,6 @@ body {
   margin: 20px 0 0 0;
 }
 
-// .arrow {
-//   background-color: green;
-// }
+.push-right {
+  float: right;
+}

@@ -47,7 +47,7 @@ input {
   bottom: 0; }
 
 .the-dot {
-  position: inherit;
+  font-size: 0.8em;
   float: right;
   color: #057965; }
 
@@ -60,3 +60,6 @@ body {
 
 .nav-bar {
   margin: 20px 0 0 0; }
+
+.push-right {
+  float: right; }

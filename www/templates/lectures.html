@@ -1,7 +1,8 @@
 <h1>----</h1>
 <div class="nav-bar row bar bar-header bar-light">
   <a ui-sref="dashboard" class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
-  <button class="button button-small button-stable" ng-click="vm.logOut()">
+  <h2>Lectures</h2>
+  <button class="push-right button button-small button-stable" ng-click="vm.logOut()">
     Logout <span href="" class="ion-ios-close-outline"></span>
   </button>
 </div>
@@ -10,8 +11,7 @@
     <p ng-bind="lecture.attributes.name"></p>
     <p ng-bind="lecture.attributes.description"></p>
     Touch To Join Lecture
+    <span class="the-dot ion-record" ng-hide="lecture.attributes.is_active"></span>
   </div>
-  <img src="../img/red-dot.png" alt="" ng-hide="lecture.attributes.is_active">
-  <img src="../img/green-dot.png" alt="" ng-show="lecture.attributes.is_active">
 </div>
 <button ng-click="vm.refresh()" class="refresh-button button button-block button-stable icon ion-loop"></button>
