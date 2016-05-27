@@ -1,5 +1,6 @@
 function lectureDisplay($http, $state, $localStorage, dashboard, landingPage){
   var vm = this;
+  vm.link
     // body...
 
   vm.lecturesArray = dashboard.getLecturesArray()
@@ -9,12 +10,10 @@ function lectureDisplay($http, $state, $localStorage, dashboard, landingPage){
     console.log(lecture_id);
     $state.go('lectureView', {lecture_id:lecture_id})
   }
-  //
-  // vm.refresh = function(){
-  //   dashboard.getClasses().then(function (res) {
-  //     vm.classesArray = res.data
-  //   })
-  // }
+
+  vm.refresh = function(link){
+    
+  }
 
   vm.logOut = function() {
     landingPage.logOut()

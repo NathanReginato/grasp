@@ -1,6 +1,5 @@
 function dashboard($http, $state, $localStorage, dashboard, landingPage){
   var vm = this;
-    // body...
   dashboard.getClasses().then(function (res) {
     vm.classesArray = res.data
   })
@@ -11,8 +10,8 @@ function dashboard($http, $state, $localStorage, dashboard, landingPage){
     })
   }
 
-  vm.refresh = function(){
-    dashboard.getClasses().then(function (res) {
+  vm.refresh = function(link){
+    dashboard.getClasses(link).then(function (res) {
       vm.classesArray = res.data
     })
   }
