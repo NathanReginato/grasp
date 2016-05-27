@@ -2,14 +2,17 @@ angular.module('graspMobile')
 .factory('dashboard', function($state, $http, $localStorage){
 
   var lecturesArray;
+  var link;
 
   return {
     getClasses: getClasses,
     getLectures: getLectures,
-    getLecturesArray: getLecturesArray
+    getLecturesArray: getLecturesArray,
+    getLink: getLink
   }
 
   function getLectures(links) {
+    link = links.summary
     return $http.get(links.summary)
     .then(function(res){
       console.log('server', res);
@@ -18,6 +21,10 @@ angular.module('graspMobile')
     });
   }
 
+  function getLink() {
+    return link
+  }
+  
   function getLecturesArray() {
     console.log('in factory', lecturesArray);
     return lecturesArray
