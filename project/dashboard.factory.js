@@ -3,20 +3,30 @@ angular.module('graspMobile')
 
   var lecturesArray;
   var lecturesLink
+  var link;
 
   return {
     getClasses: getClasses,
     getLectures: getLectures,
     getLecturesArray: getLecturesArray,
-    getLectureLinks: getLectureLinks
+    getLink: getLink
   }
 
   function getLectures(links) {
     lecturesLink = links
+    getLink: getLink
+  }
+
+  function getLectures(links) {
+    link = links.summary
     return $http.get(links.summary)
     .then(function(res){
       return lecturesArray = res.data.attributes.lectures
     });
+  }
+
+  function getLink() {
+    return link
   }
 
   function getLecturesArray() {

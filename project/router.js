@@ -4,9 +4,13 @@ angular.module('graspMobile')
   $httpProvider.interceptors.push("authInterceptor");
 
   $stateProvider
+  .state('logo', {
+    url: '/',
+    templateUrl: 'templates/logo.html'
+  })
   .state('landing', {
     scope: {},
-    url: '/',
+    url: '/landing',
     controllerAs: 'vm',
     templateUrl: 'templates/landing.html',
     controller: landingController,
