@@ -34,10 +34,11 @@ input {
 .image {
   width: 375px;
   height: 375px;
-  background: url("../images/grasp_logo.png") center no-repeat;
+  background: url("../img/grasp_logo.png") center no-repeat;
   background-size: contain; }
 
 .container {
+  margin: 75px 0 0 0;
   display: flex;
   justify-content: center; }
 
@@ -49,3 +50,7 @@ input {
   position: inherit;
   float: right;
   color: #057965; }
+
+.grip {
+  text-align: center;
+  margin: -100px 0 0 0; }
