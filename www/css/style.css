@@ -54,3 +54,6 @@ input {
 .grip {
   text-align: center;
   margin: -100px 0 0 0; }
+
+body {
+  padding-top: 20px; }
