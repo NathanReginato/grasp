@@ -31,26 +31,12 @@ input {
   margin: 5px;
   font-family: 'bodyfont'; }
 
-.logo {
+.image {
+  width: 375px;
+  height: 375px;
+  background: url("../images/grasp_logo.png") center no-repeat;
+  background-size: contain; }
+
+.container {
   display: flex;
-  justify-content: space-around; }
-
-.thumbnail {
-  position: relative;
-  width: 350px;
-  height: 350px;
-  overflow: hidden; }
-
-.thumbnail img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
-.thumbnail img.portrait {
-  width: 100%;
-  height: auto; }
+  justify-content: center; }
